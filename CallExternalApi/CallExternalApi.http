@@ -1,0 +1,40 @@
+@CallExternalApi_HostAddress = https://localhost:7196
+
+
+
+GET {{CallExternalApi_HostAddress}}/api/surveybasket/polls
+            
+
+###
+GET {{CallExternalApi_HostAddress}}/api/surveybasket/polls/2
+
+
+###
+GET {{CallExternalApi_HostAddress}}/api/surveybasket/roles?all=true
+
+
+###
+GET {{CallExternalApi_HostAddress}}/api/surveybasket/polls/2/questions
+
+###
+post {{CallExternalApi_HostAddress}}/api/surveybasket/auth
+accept: application/json
+Content-Type: application/json
+{
+    "email": "survey@gmail.com",
+    "password": "Aa3451397#"
+}
+
+###
+put {{CallExternalApi_HostAddress}}/api/surveybasket/polls/2
+accept: application/json
+Content-Type: application/json
+{
+    "title": "Updated Poll Title",
+    "summary": "Updated Poll Summary",
+    "startsAt": "2026-05-23",
+    "endsAt": "2026-12-01"
+}
+
+###
+delete {{CallExternalApi_HostAddress}}/api/surveybasket/polls/10
